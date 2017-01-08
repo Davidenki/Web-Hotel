@@ -1,27 +1,56 @@
-    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
 .navbar {
     margin-bottom: 50px;
     border-radius: 0;
-    }
     
-    /* Remove the jumbotron's default bottom margin */ 
-.jumbotron {
-
     }
    
-    /* Add a gray background color and some padding to the footer */
  footer {
-    background-color: #f2f2f2;
-    padding: 25px;
+    background-color:black;
+    color: aliceblue; 
     }
 
-.glyphicon.glyphicon-menu-right, .glyphicon.glyphicon-menu-left{
-    font-size: 200% !important;
-    color: goldenrod !important;
-    margin-top: 150%;
-}
 
-.panel.panel-primary {
+div.panel{
     text-align: center;
     
+}
+
+.panel-body{
+    padding: 0px !important;
+}
+
+div.panel-footer{
+    background-color: black;
+}
+
+input[type=date] {
+    width:50%;
+    font-size: 25px;
+    text-transform:uppercase;
+    border-style:groove;
+    border-color:deepskyblue;
+    margin-bottom: 3px;    
+}
+
+input[type=submit] {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color:deepskyblue;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px grey;
+}
+
+input[type=submit]:hover {background-color: dodgerblue}
+
+input[type=submit]:active {
+  background-color: dodgerblue;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
