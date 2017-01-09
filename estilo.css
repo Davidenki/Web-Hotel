@@ -15,12 +15,13 @@ div.panel{
     
 }
 
-.panel-body{
-    padding: 0px !important;
+div.panel-body{
+    padding: 0px;  
 }
 
 div.panel-footer{
     background-color: black;
+    border-top: 1px solid black;
 }
 
 input[type=date] {
@@ -47,7 +48,9 @@ input[type=submit] {
   box-shadow: 0 9px grey;
 }
 
-input[type=submit]:hover {background-color: dodgerblue}
+input[type=submit]:hover {
+    background-color: dodgerblue
+}
 
 input[type=submit]:active {
   background-color: dodgerblue;
