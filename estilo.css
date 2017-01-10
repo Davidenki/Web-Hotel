@@ -3,7 +3,15 @@
     border-radius: 0;
     
     }
-   
+
+.navbar-nav li:hover{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}   
+.navbar-nav li a:hover, .navbar-nav li.active a{
+    background-color: dodgerblue !important;
+    transition: 0.6s;
+}
  footer {
     background-color:black;
     color: aliceblue; 
@@ -49,7 +57,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: dodgerblue
+    background-color: dodgerblue;
 }
 
 input[type=submit]:active {

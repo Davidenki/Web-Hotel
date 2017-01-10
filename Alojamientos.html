@@ -18,37 +18,24 @@
     window.onload=function() {
                 
                 var precio;
-            
-                document.getElementById("hdoble").onclick = function(){
-                    precio = parseInt(document.getElementById("pdoble").textContent);
-                    return false;
-                }
-                document.getElementById("htriple").onclick = function(){
-                    precio = parseInt(document.getElementById("ptriple").textContent);
-                    return false;
-                }
-                document.getElementById("hcuadruple").onclick = function(){
-                    precio = parseInt(document.getElementById("pcuadruple").textContent);
-                    return false;
-                }
-                document.getElementById("hsuite").onclick = function(){
-                    precio = parseInt(document.getElementById("psuite").textContent);
-                    return false;
-                }
-                
+
                 document.getElementById("calendario1").onsubmit = function(){
+                    precio = parseInt(document.getElementById("pdoble").textContent);
                     calculo("start1","end1");
                     return false;
                 }
                 document.getElementById("calendario2").onsubmit = function(){
+                    precio = parseInt(document.getElementById("ptriple").textContent);
                     calculo("start2","end2");
                     return false; 
                 } 
                 document.getElementById("calendario3").onsubmit = function(){
+                    precio = parseInt(document.getElementById("pcuadruple").textContent);
                     calculo("start3","end3");
                     return false;
                 }
                 document.getElementById("calendario4").onsubmit = function(){
+                    precio = parseInt(document.getElementById("psuite").textContent);
                     calculo("start4","end4");
                     return false;
                 }
@@ -171,7 +158,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="Descripcion.html">Descripción</a></li>
-        <li><a href="Alojamientos.html">Alojamientos</a></li>
+        <li class="active"><a href="Alojamientos.html">Alojamientos</a></li>
         <li><a href="Contacto.html">Contacto</a></li>
       </ul>
     </div>
@@ -227,7 +214,7 @@
             <button class="btn btn-primary" id="hdoble" data-toggle="collapse" data-target="#calendario1">Inicie su reserva</button>
             <div id="calendario1" class="collapse text-center">
                 <h1><strong id="pdoble">100</strong>€</h1>
-                    <h3>por <strong>NOCHE</strong></h3>
+                    <h2>por <strong>NOCHE</strong></h2>
                     <form>
                         <input class="in" type="date" id="start1" min="2017-01-1">
                         <input class="in" type="date" id="end1" max="2025-12-31"><br>
@@ -285,7 +272,7 @@
             <button class="btn btn-primary" id="htriple" data-toggle="collapse" data-target="#calendario2">Inicie su reserva</button>
             <div id="calendario2" class="collapse text-center">
                     <h1><strong id="ptriple">200</strong>€</h1>
-                        <h3>por <strong>NOCHE</strong></h3>
+                        <h2>por <strong>NOCHE</strong></h2>
                     <form>
                         <input type="date" id="start2" min="2017-01-1">
                         <input type="date" id="end2" max="2025-12-31"><br>
@@ -348,7 +335,7 @@
             <button class="btn btn-primary" id="hcuadruple" data-toggle="collapse" data-target="#calendario3">Inicie su reserva</button>
             <div id="calendario3" class="collapse text-center">
                     <h1><strong id="pcuadruple">300</strong>€</h1>
-                        <h3>por <strong>NOCHE</strong></h3>
+                        <h2>por <strong>NOCHE</strong></h2>
                     <form>
                         <input type="date" id="start3" min="2017-01-1">
                         <input type="date" id="end3" max="2025-12-31"><br>
@@ -406,7 +393,7 @@
             <button class="btn btn-primary" id="hsuite" data-toggle="collapse" data-target="#calendario4">Inicie su reserva</button>
             <div id="calendario4" class="collapse text-center">
                     <h1><strong id="psuite">400</strong>€</h1>
-                        <h3>por <strong>NOCHE</strong></h3>
+                        <h2>por <strong>NOCHE</strong></h2>
                     <form>
                         <input type="date" id="start4" min="2017-01-1">
                         <input type="date" id="end4" max="2025-12-31"><br>
