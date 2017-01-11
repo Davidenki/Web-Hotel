@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <title>ALOJAMIENTOS</title>
+  <title>San José - Estancia</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="estilo.css" rel="stylesheet" type="text/css" />
@@ -45,7 +45,7 @@
                     var end = document.getElementById(final).value;
 
                         if(start == "" || end == "") {
-                           alertify.alert('ERROR','Debe introducir una fecha de inicio y una de finalización')
+                           alertify.alert('ERROR','Debe introducir una fecha de INICIO y una de FINALIZACIÓN')
                            .setting({
                               'label':'ACEPTAR',
                               'onok': function(){ alertify.error('RESERVA CANCELADA');},
@@ -55,7 +55,7 @@
                            });
 
                          } else if(start > end) {
-                                alertify.alert('ERROR','La fecha de inicio no puede ser posterior a la de finalización')
+                                alertify.alert('ERROR','La fecha de INICIO no puede ser posterior a la de FINALIZACIÓN')
                                 .setting({
                                 'label':'ACEPTAR',
                                 'onok': function(){ alertify.error('RESERVA CANCELADA');},
@@ -137,14 +137,8 @@
   </script>
 </head>
     
-<body>
+<body id="bEst">
     
-<div class="jumbotron">
-  <div class="container text-center">
-    <h1>ESTANCIA</h1>
-  </div>
-</div>
-
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -153,24 +147,30 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="Inicio.html">San José</a>
+      <a class="navbar-brand" href="inicio.html">San José</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="inicio.html">Hotel</a></li>
         <li class="active"><a href="estancia.html">Estancia</a></li>
         <li><a href="galeria.html">Galería</a></li>
-        <li><a href="Contacto.html">Contacto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </div>
   </div>
 </nav>
-
+    
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1 id="jumbText"><strong>ESTANCIA</strong></h1>
+  </div>
+</div>
+    
 <div class="container">    
   <div class="row">
     <div class="col-sm-6">
       <div class="panel panel-primary">
-        <div class="panel-heading">HABITACIÓN DOBLE</div>
+        <div class="panel-heading"><strong>HABITACIÓN DOBLE</strong></div>
         <div class="panel-body">
             
             <!-- CAROUSEL 1 -->
@@ -229,7 +229,7 @@
 
     <div class="col-sm-6"> 
       <div class="panel panel-primary">
-        <div class="panel-heading">HABITACIÓN TRIPLE</div>
+        <div class="panel-heading"><strong>HABITACIÓN TRIPLE</strong></div>
         <div class="panel-body">
             
             <!-- CAROUSEL 2 -->
@@ -292,7 +292,7 @@
   <div class="row">
     <div class="col-sm-6">
       <div class="panel panel-primary">
-        <div class="panel-heading">HABITACIÓN CUÁDRUPLE</div>
+        <div class="panel-heading"><strong>HABITACIÓN CUÁDRUPLE</strong></div>
         <div class="panel-body">
             
             <!-- CAROUSEL 3 -->
@@ -350,7 +350,7 @@
 
     <div class="col-sm-6"> 
       <div class="panel panel-primary">
-        <div class="panel-heading">HABITACIÓN SUITE</div>
+        <div class="panel-heading"><strong>HABITACIÓN SUITE</strong></div>
         <div class="panel-body">
             
             <!-- CAROUSEL 4 -->
@@ -410,7 +410,7 @@
     <br><br>
 
 <footer id="fEst" class="container-fluid text-center">
-  <h3>Si tiene algún problema con la reserva póngase en contacto con nosotros <a href="Contacto.html" class="btn btn-info btn-lg">
+  <h3>Si tiene algún problema con la reserva póngase en contacto con nosotros <a href="contacto.html" class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-info-sign"></span> Contacto
         </a></h3>  
 </footer>
