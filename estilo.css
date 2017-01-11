@@ -1,18 +1,54 @@
+
 .navbar {
     margin-bottom: 50px;
     border-radius: 0;
     
     }
 
-.navbar-nav li:hover{
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-}   
 .navbar-nav li a:hover, .navbar-nav li.active a{
     background-color: dodgerblue !important;
     transition: 0.6s;
 }
- footer {
+
+  footer {
+      background-color: beige;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; 
+      margin: auto;
+      min-height:200px;
+      
+  }
+
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none;
+    }
+  }
+
+.carousel-caption h1, .carousel-caption h3{
+    text-shadow: 3px 2px 2px #000000
+}
+
+#centroInic{
+    width: 100%;
+    background-color: black;
+}
+
+#centroInic img{
+    margin-bottom: 20px;
+}
+
+.well {
+    margin-top: 2.5px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 2em;
+}
+
+ #fEst {
     background-color:black;
     color: aliceblue; 
     }
