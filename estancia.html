@@ -65,43 +65,37 @@
                            });
                              
                         } else {
-                            let resultado, diferencia, inic, fin, duracion, total;
-                            
+                            let resultado, diferencia, inic, fin, duracion, total=0;
                             resultado = parseInt((Math.random() * 2));
                             diferencia = moment(end).diff(start);
                             duracion = Math.round(moment.duration(diferencia).asDays());
                             
-                            if(duracion != 0){  
-                                var mult = 1;
-                                
-                                if (duracion == 1){
-                                    mult *= 1.2;
-                                
-                                } else if (duracion > 7){
-                                        mult *= 0.9;
-                                }
 
-                                inic = moment(start).day();
-                                fin = moment(end).day();
+                            for(var i=0; i<duracion; i++){
+                                var mult=1;
+                                var noche = moment(start);
                                 
+                                noche.add(i, 'days');
                                 //Sábado se corresponde con el 6 y Domingo con el 0
-                                if(inic == 6 || inic == 0 || fin == 6 || fin == 0 ){
-                                        mult *= 1.15;
+                                if(noche.day() == 6 || noche.day() == 0){
+                                    mult *= 1.15;
                                 }
-
-                                inic = moment(start).month();
-                                fin = moment(end).month();
-                                
                                 //Junio: 5, Julio: 6, Agosto: 7, Septiembre: 8
-                                if(inic == 5 || inic == 6 || inic == 7 || inic == 8 || fin == 5 || fin == 6 || fin == 7 || fin == 8){
-                                        mult *= 1.4;
-                                   }
-
-                                total = Math.round(duracion * precio * mult);
+                                if(noche.month() == 5 || noche.month() == 6 || noche.month() == 7 || noche.month() == 8){
+                                    mult *= 1.40;
+                                }
                                 
-                            } else {
-                                total = precio;
+                                total = total + (precio * mult);
                             }
+                            
+                            //Miramos si se ha reservado 1 sola noche o más de 7
+                            if(duracion == 1){
+                                total *= 1.2;
+                            } else if(duracion > 7){
+                                total *= 0.9;
+                            }
+                                                   
+                            total = Math.round(total);
                             
                             inic = moment(start).locale('es').format('dddd, LL');
                             fin = moment(end).locale('es').format('dddd, LL');
